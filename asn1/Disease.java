@@ -5,16 +5,6 @@ import java.util.UUID;
 public class Disease {
 UUID diseasesId;
 String name;
-/**
- * parameterised constructor is used to set diseaseID and name
- * @param diseasesId
- * @param name
- */
-public Disease(UUID diseasesId, String name) {
-	super();
-	this.diseasesId = diseasesId;
-	this.name = name;
-}
 public int hashCode() {
 	return super.hashCode();
 }

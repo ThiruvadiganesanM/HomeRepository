@@ -1,6 +1,7 @@
 package edu.disease.asn1;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThrows;
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.time.LocalDateTime;
@@ -31,6 +32,11 @@ public class PatientTest {
 		patient.setPatientId(uuid);
 	}
 	
+	@Test
+	public void testConstructor() {
+		
+		 assertThrows(IllegalAccessException.class, ()->{ patient=new Patient(0,-2);});
+	}
 	@Test
 	public void testPatientPostiveScenario()
 	{

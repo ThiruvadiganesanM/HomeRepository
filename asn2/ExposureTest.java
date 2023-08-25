@@ -1,4 +1,4 @@
-package edu.disease.asn3;
+package edu.disease.asn2;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;

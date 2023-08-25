@@ -9,11 +9,7 @@ String name;
 public Disease() {
 	
 }
-public Disease(UUID diseasesId, String name) {
-	super();
-	this.diseaseId = diseasesId;
-	this.name = name;
-}
+
 public int hashCode() {
 	return super.hashCode();
 }

@@ -2,13 +2,12 @@ package edu.disease.asn3;
 
 import java.util.UUID;
 
-import edu.disease.asn1.Exposure;
+import edu.disease.asn3.Exposure;
 
 public class DiseaseControlManagerImpl implements DiseaseControlManager {
 	private Disease[] diseases;
 	private Patient[] patient;
 	int diseaseCount = 0, patientCount = 0;
-
 
 	public DiseaseControlManagerImpl(int maxDiseases, int maxPatients) {
 		if (maxDiseases <= 0 && maxPatients <= 0) {
@@ -32,9 +31,9 @@ public class DiseaseControlManagerImpl implements DiseaseControlManager {
 			}
 		}
 		if (isInfectious) {
-			disease = new InfectiousDisease(UUID.randomUUID(), diseaseName);
+			disease = new InfectiousDisease();
 		} else {
-			disease = new NonInfectiousDisease(UUID.randomUUID(), diseaseName);
+			disease = new NonInfectiousDisease();
 		}
 		if (disease != null) {
 			diseases[diseaseCount] = disease;
@@ -140,13 +139,13 @@ public class DiseaseControlManagerImpl implements DiseaseControlManager {
 		patie.addExposure(exposure);
 	}
 
-	@Override
 	public Disease[] getDiseases() {
 
 		return this.diseases;
 	}
-	@Override
 	public Patient[] getPatient() {
 		return this.patient;
 	}
+
+	
 }

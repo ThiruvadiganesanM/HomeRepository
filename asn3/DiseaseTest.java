@@ -14,7 +14,7 @@ public class DiseaseTest {
 	public void testNonInfectiousDiseases() {
 		Disease d = new NonInfectiousDisease();
 		assertNotNull(d.getExamples());
-	}
+   }
 	@Test
 	public void testDiseasePostiveScenario()
 	{

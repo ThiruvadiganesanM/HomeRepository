@@ -9,10 +9,8 @@ public class NonInfectiousDisease extends Disease {
 	public String[] getExamples() {
 		return disease;
 	}
-	public NonInfectiousDisease(UUID diseaseId,String name) {
-		super(diseaseId,name);
-	}
-	NonInfectiousDisease(){
+	
+	public NonInfectiousDisease(){
 		
 	}
 }

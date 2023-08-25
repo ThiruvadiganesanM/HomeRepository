@@ -1,5 +1,4 @@
 package edu.disease.asn1;
-
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -8,11 +7,11 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 import org.junit.Before;
 import org.junit.Test;
-
-import edu.disease.asn1.Exposure;
 public class ExposureTest {
 	private Exposure exposure;
+	
 	@Before
+	
 	public void setUp() {
 		final UUID uuid = UUID.randomUUID();
 		exposure = new Exposure(uuid);
@@ -20,7 +19,8 @@ public class ExposureTest {
 		exposure.setExposureType("D");
 	}
 	@Test
-	public void testExposurePostiveScenario() {
+	public void testExposurePostiveScenario()
+	{
 		assertNotNull(exposure.toString());
 		assertNotNull(exposure.getDateTime());
 		assertNotNull(exposure.getPatientId());
@@ -44,8 +44,12 @@ public class ExposureTest {
 		exposureObjEquals.setDateTime(null);
 		assertFalse(exposure.equals(exposureObjEquals));
 	}
+	
+	
 	@Test(expected = IllegalArgumentException.class)
-	public void testException() {
+	public void testException()
+	{
 		exposure.setExposureType(null);
 	}
+	
 }

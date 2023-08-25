@@ -35,4 +35,9 @@ public void testSetPatients() {
 	DiseaseAndPatient dap=new DiseaseAndPatient(diseases,patients);
 	 dap.setPatients(patients);
 }
+@Test
+public void testDefaultConstructor() {
+	DiseaseAndPatient dap=new DiseaseAndPatient();
+}
+
 }

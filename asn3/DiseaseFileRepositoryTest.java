@@ -22,12 +22,16 @@ class DiseaseFileRepositoryTest {
 	void test() {
 		fail("Not yet implemented");
 	}
-
-	
 	@Test
 	public void testInit() throws ClassNotFoundException, IOException {
 		String folderPath="D:\\Ganesh";
 		DiseaseFileRepository dfr = new DiseaseFileRepository();
+		assertThrows(, executable)
 		assertNotNull(dfr.init(folderPath));
+	}
+	public void testInit2() throws ClassNotFoundException, IOException {
+		String folderPath1=null;
+		DiseaseFileRepository dfr=new DiseaseFileRepository();
+		assertNotNull(dfr.init(folderPath1));
 	}
 }

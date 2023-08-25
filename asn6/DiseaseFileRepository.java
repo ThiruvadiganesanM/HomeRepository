@@ -1,14 +1,19 @@
-package edu.disease.asn3;
+package edu.disease.asn6;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.util.List;
+
+import edu.disease.asn3.Disease;
+
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 
 public class DiseaseFileRepository {
 	String folderPath;
-	public void save(Disease[] diseases, Patient[] patients) throws IOException {
+
+	public void save(List<Disease> diseases, List<Patient> patients) throws IOException {
 		FileOutputStream diseaseFile = new FileOutputStream(folderPath + "\\diseases.dat");
 		ObjectOutputStream output = new ObjectOutputStream(diseaseFile);
 		output.writeObject(diseases);
@@ -25,11 +30,11 @@ public class DiseaseFileRepository {
 			this.folderPath = folderPath;
 			FileInputStream disease = new FileInputStream(folderPath + "\\diseases.dat");
 			ObjectInputStream diseaseInput = new ObjectInputStream(disease);
-			diseasePatient.setDiseases((Disease[]) diseaseInput.readObject());
+			diseasePatient.setDiseases((List<Disease>) diseaseInput.readObject());
 
 			FileInputStream patient = new FileInputStream(folderPath + "\\patients.dat");
 			ObjectInputStream patientInput = new ObjectInputStream(patient);
-			diseasePatient.setPatients((Patient[]) patientInput.readObject());
+			diseasePatient.setPatients((List<Patient>) patientInput.readObject());
 			return diseasePatient;
 		}
 	}

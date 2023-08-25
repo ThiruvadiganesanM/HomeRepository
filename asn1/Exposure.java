@@ -17,9 +17,9 @@ public class Exposure {
 		setPatientId(patientId);
 	}
 
-//	public Exposure(String exposuretype, LocalDateTime dateTime) {
-//		setExposureType(exposuretype);
-//	}
+	public Exposure(String exposuretype, LocalDateTime dateTime) {
+		setExposureType(exposuretype);
+	}
 /**
  *  override hashcode method for creating unique hashcode based on fields
  */
@@ -107,11 +107,10 @@ public class Exposure {
 	 * @param exposuretype
 	 */
 	public void setExposureType(String exposuretype) {
-		if (exposuretype.equalsIgnoreCase("D")) {
-			this.exposureType = "D";
-		} else if (exposuretype.equalsIgnoreCase("I")) {
-			this.exposureType = "I";
-		} else {
+		if((exposuretype.equalsIgnoreCase("D")||(exposuretype.equalsIgnoreCase("I")))){
+			this.exposureType=exposuretype;
+		}
+		else {
 			try {
 				throw new IllegalArgumentException();
 			} catch (IllegalArgumentException e) {
