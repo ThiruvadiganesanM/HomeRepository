@@ -16,7 +16,6 @@ public class InvoiceMasterDAOImpl implements InvoiceMasterDAO {
 	public InvoiceMasterDAOImpl(Connection con) {
 		this.con=con;
 	}
-	
 	@Override
 	public InvoiceMasterDTO findByInvoiceId(int invoiceId) throws SQLException {
 		pstmt=con.prepareStatement("select * from invoice_master where invoice_id=?");

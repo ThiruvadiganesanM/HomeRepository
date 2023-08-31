@@ -5,6 +5,7 @@ private int customer_id;
 private String customer_name;
 private String customer_address;
 private long customer_telephone;
+
 public int getCustomer_id() {
 	return customer_id;
 }
