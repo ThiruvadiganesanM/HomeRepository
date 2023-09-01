@@ -103,7 +103,7 @@ public class CustomerMasterDAOImpl implements CustomerMasterDAO {
 			pstmt.setLong(4, cmd.getCustomer_telephone());
 			
 			int noru=pstmt.executeUpdate();
-			con.close();rs.close();
+//			con.close();rs.close();
 			return noru;
 		} catch (SQLException e) {
 
