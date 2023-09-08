@@ -5,8 +5,8 @@ import javax.servlet.http.HttpServletResponse;
 
 public class LogoutAction extends Action{
 	@Override
-	public String execute(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
+	public String execute(HttpServletRequest request , HttpServletResponse response) {
+		
 		return null;
 	}
 }
